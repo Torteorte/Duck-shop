@@ -125,10 +125,9 @@ h1:last-of-type {
 }
 .backet {
   cursor: pointer;
-  padding: 10px 15px;
-  background-color: rgba(0, 128, 0, 0.5);
-  color: white;
-  border-radius: 10px;
+  padding: 5px 5px;
+  color: grey;
+  border-bottom: grey 1px solid;
   transition-duration: 150ms;
 }
 .backet input {
@@ -140,10 +139,10 @@ h1:last-of-type {
   text-align: center;
 }
 .backet:hover {
-  background-color: rgba(0, 128, 0, 0.7);
+  color: #505050;
 }
 .backet:active {
-  background-color: rgba(0, 128, 0, 0.5);
+  color: #505050;
 }
 .container {
   width: 1200px;

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link  rel="stylesheet" href="css/style.css">
+  <link  rel="stylesheet" href="css/order.css">
+  <link  rel="stylesheet" href="css/modal.css">
+  <link  rel="stylesheet" href="css/slider.css">
+  <link  rel="stylesheet" href="css/small_device.css">
+  <link  rel="stylesheet" href="css/windows.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  <base target="blank">
+  <title>DuckShop</title>
+</head>
+<body>
+
+  <div class="header">
+    <ul class="header-list">
+      <li class="logo-image">
+        <img src="image/bigDuck.svg" alt="Duck logo" width="70px">
+      </li>
+      <li class="contacts">
+        <span class="mobile-hidden">Свяжитесь с нами:</span> <span class="contacts-button">Контакты</span>
+        <ul class="contacts-list hidden">
+          <li><a href="#" title="Facebook">Sasha Lipsky</a></li>
+          <li><a href="#" title="Instagram">Sasha_Lipsky</a></li>
+          <li><a href="#" title="Telegram">@torteorte</a></li>
+          <li>+38(050)746-51-30</li>
+        </ul>
+      </li>
+
+      <li class="backet">Корзина (<span id="number-of-ducks">0</span>)</li>
+    </ul>
+  </div>
+
+  <h1>Наши резиновые уточки</h1>
+
+  <div class="slider">
+    <div class="slide-item">
+        <img src="image/slide1.jpg" alt="Первый слайд">
+    </div>
+
+    <div class="slide-item">
+        <img src="image/slide2.jpg" alt="Второй слайд">
+    </div>
+
+    <div class="slide-item">
+        <img src="image/slide3.jpg" alt="Третий слайд">
+    </div>
+
+    <a class="prev" title="preview" onclick="minusSlide()">&#10094;</a>
+    <a class="next" title="next" onclick="plusSlide()">&#10095;</a>
+  </div>
+
+  <div class="slider-dots">
+    <span class="slider-dots-item" onclick="currentSlide(1)"></span> 
+    <span class="slider-dots-item" onclick="currentSlide(2)"></span> 
+    <span class="slider-dots-item" onclick="currentSlide(3)"></span> 
+  </div>
+  
+<h1>Заказывай своё чудо</h1>
+
+  <div class="container">
+    <div class="ducks-items">
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div id="contacts-footer">
+        <h2>Контакты</h2>
+        <ul>
+          <li>Телефон: +38(050)-03-15-647</li>
+          <li>Режим работы: Пн-Сб 9.00 - 18.00; Вс - выходной </li>
+          <li>Адресс: г. Запорожье, ул. Пушкина д. Колотушкина</li>
+          <li>Email: duckstore@gmail.com</li>
+        </ul>
+      </div>
+      <div id="social-footer">
+        <h2>Мы в соцсетях</h2>
+        <ul>
+          <li> <a href="#" title="Our Facebook">Facebook</a> </li>
+          <li> <a href="#" title="Our Telegram">Instagram</a></li>
+        </ul>
+      </div>
+      <div id="info-footer">
+        <h2>Информация</h2>
+        <ul>
+          <li> <a href="#" title="Информация о нас">О нас</a> </li>
+          <li> <a href="#" title="Оплата и доставка">Условия доставки</a> </li>
+          <li> <a href="#" title="Сотрудничество с нами">Сотрудничество</a> </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="up-button" type="button">
+    <span>^</span> 
+  </button>
+  
+  <script src="modal.js"></script>
+  <script src="contacts.js"></script>
+  <script src="script.js"></script>
+  <script src="windows.js"></script>
+  <script src="arrow.js"></script>
+  <script src="slider.js"></script>
+
+</body>
+</html>

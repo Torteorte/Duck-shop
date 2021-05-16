@@ -1,0 +1,62 @@
+.order-modal {
+  width: 670px;
+  margin: auto;
+  max-height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: auto;
+}
+.order {
+  position: relative;
+  display: grid;
+  height: 80px;
+  margin: 20px 0;
+  grid-template-columns: 70px 1fr 270px;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+}
+.order img {
+  display: inline-block;
+  margin: auto;
+}
+.order p {
+  margin: auto 10px;
+}
+.order p span {
+  font-weight: 700;
+}
+.order input {
+  width: 10px;
+  text-align: center;
+  font-size: 16px;
+  background-color: white;
+  border: none;
+}
+.order input:disabled {
+  color: black;
+}
+.order .remove-button {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  top: -15px;
+  right: 10px;
+  font-size: 110%;
+  color: darkred;
+  border: none;
+  background: transparent;
+}
+.order button {
+  cursor: pointer;
+  min-width: 15px;
+  margin: 5px;
+  padding: 2px;
+  font-weight: 700;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+.order:last-child {
+  border-bottom: none;
+}

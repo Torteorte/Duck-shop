@@ -1,0 +1,316 @@
+body {
+  position: relative;
+  min-width: 1200px;
+  min-height: 1200px;
+  margin: 0;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: SteelBlue;
+}
+h1 {
+  margin-top: 80px;
+  margin-bottom: 0;
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(to right, #ffff00 0%, #e6c301 20%, #ffa600);
+  color: #f7f3f3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h1:last-of-type {
+  margin-top: 0;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  background-color: lightgrey;
+  box-shadow: 0 0 15px 0 black;
+  z-index: 1;
+}
+.header .header-list {
+  width: 1000px;
+  max-height: 80px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+}
+.contacts {
+  position: relative;
+  margin-left: auto;
+  margin-right: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+.contacts p {
+  margin: 25px 0 10px;
+  color: #686868;
+}
+.contacts .contacts-button {
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto 20px;
+  padding: 7px 15px;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+  border-radius: 10px;
+  transition-duration: 150ms;
+}
+.contacts .contacts-button:hover {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+.contacts .contacts-list {
+  position: absolute;
+  top: 50px;
+  left: 75px;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  background-color: lightgrey;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 black;
+}
+.contacts .contacts-list li {
+  position: relative;
+  margin-top: 5px;
+  padding: 10px 15px;
+  padding-left: 50px;
+  font-size: 20px;
+  color: black;
+  border-bottom: 1px solid black;
+  text-align: right;
+  color: SteelBlue;
+}
+.contacts .contacts-list li::before {
+  position: absolute;
+  content: "";
+  left: 5px;
+  bottom: 8px;
+  width: 25px;
+  height: 25px;
+  background-image: url("image/fb.svg");
+  background-size: contain;
+}
+.contacts .contacts-list li:nth-child(2)::before {
+  background-image: url("image/inst.svg");
+}
+.contacts .contacts-list li:nth-child(3)::before {
+  background-image: url("image/tg.svg");
+}
+.contacts .contacts-list li:nth-child(4)::before {
+  background-image: url("image/phone.png");
+}
+.hidden {
+  display: none;
+}
+.hover {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+.logo-image {
+  margin-top: 5px;
+}
+.backet {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: rgba(0, 128, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  transition-duration: 150ms;
+}
+.backet input {
+  width: 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: solid 3px rgba(255, 0, 0, 0.7);
+  border-radius: 50%;
+  text-align: center;
+}
+.backet:hover {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+.backet:active {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.container {
+  width: 1200px;
+  margin: auto;
+  margin-top: 0;
+}
+.ducks-items {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.ducks-items .duck-item {
+  padding: 10px 20px 20px;
+  position: relative;
+}
+.ducks-items .duck-item img {
+  display: block;
+  margin: auto;
+  z-index: -1;
+}
+.ducks-items .duck-item h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+.ducks-items .duck-item p {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+.ducks-items .duck-item span {
+  padding: 5px 0 5px 5px;
+  border-bottom: 1px solid #d1d1d1;
+}
+.ducks-items .duck-item .button-order {
+  cursor: pointer;
+  float: right;
+  padding: 7px;
+  font-size: 14px;
+  background-color: lightgreen;
+  border: solid 1px #575757;
+  border-radius: 5px;
+  transform: translateY(-5px);
+  transition: 300ms;
+}
+.ducks-items .duck-item .button-order:hover {
+  background-color: #53e953;
+}
+.ducks-items .duck-item .duck-item .button-order:active {
+  background-color: lightgreen;
+}
+.ducks-items .duck-item .ordered {
+  color: black;
+  background-color: lightcoral;
+}
+.ducks-items .duck-item .ordered:hover {
+  background-color: lightcoral;
+}
+.ducks-items .hot {
+  position: absolute;
+  content: "";
+  top: 200px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+  background-image: url("image/hot.PNG");
+  background-size: contain;
+}
+.ducks-items .new {
+  position: absolute;
+  content: "";
+  top: 200px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  background-image: url("image/new2.PNG");
+  background-size: contain;
+}
+.ducks-items .not-in-stock {
+  filter: grayscale(100%);
+}
+.ducks-items .duck-item:hover {
+  box-shadow: 0 5px 10px 0px darkgrey;
+}
+footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #1d1838;
+  color: white;
+}
+footer .footer-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .footer-container div {
+  padding: 0 10px;
+}
+footer .footer-container div:nth-child(2) {
+  margin-left: auto;
+  margin-right: 80px;
+}
+footer .footer-container div:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1000ms, transform 1000ms cubic-bezier(0.2, 0.8, 0.6, 1);
+}
+footer .footer-container div:nth-child(2),
+footer .footer-container div:nth-child(3) {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1000ms, transform 1000ms cubic-bezier(0.2, 0.8, 0.6, 1);
+}
+footer .footer-container ul {
+  padding: 0;
+  margin: 0;
+}
+footer .footer-container ul li {
+  padding: 10px 0;
+  font-size: 18px;
+  color: #d5f5ff;
+}
+footer .footer-container a {
+  color: #d5f5ff;
+}
+footer .footer-container h2 {
+  text-transform: uppercase;
+}
+#contacts-footer.show-footer {
+  opacity: 1;
+  transform: translateX(0px);
+}
+#social-footer.show-footer,
+#info-footer.show-footer {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.up-button {
+  position: fixed;
+  z-index: 1;
+  bottom: 25px;
+  left: 25px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  color: darkgrey;
+  background-color: lightgrey;
+  opacity: 0;
+  transition: opacity 2s, background-color 250ms;
+}
+.up-button span {
+  width: 0;
+  height: 0;
+}
+.up-button:hover {
+  background-color: coral;
+  color: lightgray;
+}
+.shown {
+  opacity: 1;
+}

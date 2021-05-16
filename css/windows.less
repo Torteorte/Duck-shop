@@ -1,0 +1,54 @@
+.foot-window {
+    position: fixed;
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 15px 0 black;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: transform 0.5s, opacity 0.5s;
+
+    p {
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+    }
+    img {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+    button {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px grey solid;
+        background: linear-gradient(to right, rgb(255, 232, 102), rgb(255, 186, 58));
+        background-size: 200% auto;
+        transition: 500ms;
+
+        &:hover {
+            background-position: right;
+        }
+    } 
+}
+
+.foot-window-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.foot-window-close {
+    opacity: 0;
+    transform: translateY(150px);
+}

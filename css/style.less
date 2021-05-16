@@ -1,0 +1,377 @@
+body {
+  position: relative;
+  min-width: 1200px;
+  min-height: 1200px;
+  margin: 0;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: SteelBlue;
+}
+
+// желтые заголовки
+h1 {
+  margin-top: 80px;
+  margin-bottom: 0;
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(255, 255, 0) 0%, rgb(230, 195, 1) 20%, rgb(255, 166, 0));
+  color: rgb(247, 243, 243);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  &:last-of-type {
+    margin-top: 0;
+  }
+}
+
+// фиксирвоанная шапка
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  background-color: lightgrey;
+  box-shadow: 0 0 15px 0 black;
+  z-index: 1;
+
+  .header-list {
+    width: 1000px;
+    max-height: 80px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+  }  
+}
+
+.contacts {
+  position: relative;
+  margin-left: auto;
+  margin-right: 100px;
+  text-align: center;
+  border-radius: 10px;
+
+  p {
+    margin: 25px 0 10px;
+    color: rgb(104, 104, 104);
+  }
+
+  .contacts-button {
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto 20px;
+    padding: 7px 15px;
+    background-color: rgba(0, 0, 255, 0.5);
+    color: white;
+    border-radius: 10px;
+    transition-duration: 150ms;
+
+    &:hover {
+      background-color: rgba(0, 0, 255, 0.7);  
+    }
+  }
+
+  .contacts-list {
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    margin: 0;
+    padding: 10px;
+    list-style: none; 
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 black;
+
+    li {
+      position: relative;
+      margin-top: 5px;
+      padding: 10px 15px;
+      padding-left: 50px;
+      font-size: 20px;
+      color: black;
+      border-bottom: 1px solid black;
+      text-align: right;
+      color: SteelBlue;
+    }
+
+    li::before {
+      position: absolute;
+      content: "";
+      left: 5px;
+      bottom: 8px;
+      width: 25px;
+      height: 25px;
+      background-image: url("image/fb.svg");
+      background-size: contain;
+    }
+
+    li:nth-child(2)::before {
+      background-image: url("image/inst.svg");
+    }
+    
+    li:nth-child(3)::before {
+      background-image: url("image/tg.svg");
+    }
+    
+    li:nth-child(4)::before {
+      background-image: url("image/phone.png");
+    }
+  }
+}
+
+// для меню контактов
+.hidden {
+  display: none;
+}
+.hover {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+//
+
+.logo-image {
+  margin-top: 5px;
+}
+
+.backet {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: rgba(0, 128, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  transition-duration: 150ms;
+
+  input {
+    width: 20px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: solid 3px rgba(255, 0, 0, 0.7);
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: rgba(0, 128, 0, 0.7);
+  }
+
+  &:active {
+    background-color: rgba(0, 128, 0, 0.5);
+  }
+}
+
+// блок уток
+.container {
+  width: 1200px;
+  margin: auto;
+  margin-top: 0;
+}
+
+.ducks-items {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  .duck-item {
+    padding: 10px 20px 20px;
+    position: relative;
+
+    img {
+      display: block;
+      margin: auto;
+      z-index: -1;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    p {
+      margin-left: 20px;
+      margin-bottom: 5px;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    span {
+      padding: 5px 0 5px 5px;
+      border-bottom: 1px solid rgb(209, 209, 209)
+    }
+
+    .button-order {
+      cursor: pointer;
+      float: right;
+      padding: 7px;
+      font-size: 14px;
+      background-color: lightgreen;
+      border: solid 1px rgb(87, 87, 87);
+      border-radius: 5px;
+      transform: translateY(-5px);
+      transition: 300ms;
+    }
+
+    .button-order:hover {
+      background-color: rgb(83, 233, 83);
+    }
+    
+    .duck-item .button-order:active {
+      background-color: lightgreen;
+    }
+
+    .ordered {
+      color: black;
+      background-color: lightcoral;
+
+      &:hover {
+        background-color: lightcoral;
+      }
+    }
+  }
+
+  .hot {
+    position: absolute;
+    content: "";
+    top: 200px;
+    left: 20px;
+    height: 30px;
+    width: 30px;
+    background-image: url("image/hot.PNG");
+    background-size: contain;
+  }
+
+  .new {
+    position: absolute;
+    content: "";
+    top: 200px;
+    left: 50px;
+    height: 30px;
+    width: 30px;
+    background-image: url("image/new2.PNG");
+    background-size: contain;
+  }
+  
+  .not-in-stock {
+    filter: grayscale(100%);
+  }
+
+  .duck-item:hover {
+    box-shadow: 0 5px 10px 0px darkgrey;
+  }
+}
+
+// подвал
+footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #1d1838;
+  color: white;
+
+  .footer-container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      padding: 0 10px;
+    }
+
+    div:nth-child(2) {
+      margin-left: auto;
+      margin-right: 80px;
+    }
+
+    div:nth-child(1) {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 1000ms, transform 1000ms cubic-bezier(0.2, 0.8, 0.6, 1);
+    }
+
+    div:nth-child(2),
+    div:nth-child(3) {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 1000ms, transform 1000ms cubic-bezier(0.2, 0.8, 0.6, 1);
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 10px 0;
+        font-size: 18px;
+        color: #d5f5ff;
+      }
+    }
+
+    a {
+      color: #d5f5ff;
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+}
+
+#contacts-footer.show-footer {
+  opacity: 1;
+  transform: translateX(0px);
+}
+#social-footer.show-footer,
+#info-footer.show-footer {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+// кнопка вверх
+
+.up-button {
+  position: fixed;
+  z-index: 1;
+  bottom: 25px;
+  left: 25px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  color: darkgrey;
+  background-color: lightgrey;
+  opacity: 0;
+  transition: opacity 2s, background-color 250ms;
+
+  span {
+    width: 0;
+    height: 0;
+  }
+
+  &:hover {
+    background-color: coral;
+    color: lightgray;
+  }
+}
+
+.shown {
+  opacity: 1;
+}

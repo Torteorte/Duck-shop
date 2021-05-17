@@ -49,14 +49,19 @@ function createModal() {
     open() {
       vmodal.classList.add("open")
     },
-    close(event) {
-      if ( event.target.className == 'modal-overlay' ||  event.target.className == 'modal-close') 
+    close() {
       vmodal.classList.remove("open")
     }
   }
 
+  function closeModal() {
+    if ( event.target.className == 'modal-overlay' ||  event.target.className == 'modal-close') {
+      windowModal.close()
+    }
+  }
+
   backetButton.addEventListener("click", windowModal.open)
-  vmodal.addEventListener("click", windowModal.close)
+  vmodal.addEventListener("click", closeModal)
 }
 
 createModal()

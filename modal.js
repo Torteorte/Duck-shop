@@ -37,13 +37,15 @@ function _createModal(options) {
   return modal
 }
 
+let windowModal = {}
+
 function createModal() {
 
   _createModal(backet)
   let vmodal = document.querySelector(".vmodal")
   let backetButton = document.querySelector(".backet")
 
-  let windowModal = {
+  windowModal = {
     open() {
       vmodal.classList.add("open")
     },
